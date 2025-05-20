@@ -1,0 +1,20 @@
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  QueryList,
+  signal,
+  ViewChildren,
+} from '@angular/core';
+import { RouterLink } from '@angular/router';
+
+@Component({
+  selector: 'app-pricing',
+  standalone: true,
+  imports: [RouterLink],
+  templateUrl: './pricing.component.html',
+  styleUrl: './pricing.component.css',
+})
+export class PricingComponent {
+  
+}

@@ -1,0 +1,71 @@
+<section
+  class="container-fluid d-flex justify-content-center align-items-center flex-column gap-3 mt-5 pt-5 min-vh-100 bgcolor"
+  id="pricing"
+>
+  <div class="lh-lg title">
+    <h6>Instalaciones</h6>
+    <h2>Nuestros departamentos</h2>
+    <p>Elige el departamento que mejor se adapte a ti.</p>
+  </div>
+  <div class="d-md-flex gap-5">
+    <div class="card mb-3 mx-5 shadow slide-in-left" style="width: 25rem">
+      <img
+        src="/image/instalaciones/depto1/depto1_4h.jpg"
+        class="card-img-top ratio ratio-16x9"
+        alt="..."
+      />
+      <div class="card-body bgcolor">
+        <h5 class="tcolor">6 Personas</h5>
+
+        <p class="card-text">
+          Departamento amplio, en planta baja, equipado con cocina completa,
+          heladera, microondas, vajilla completa, TV.
+        </p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item bgcolor">
+          <i class="bi bi-check"></i>2 Habitaciones
+        </li>
+        <li class="list-group-item bgcolor">
+          <i class="bi bi-check bgcolor"></i>Ropa de cama y toallas
+        </li>
+        <li class="list-group-item">
+          <i class="bi bi-check"></i>Ambiente climatizado
+        </li>
+        <li class="list-group-item bgcolor">
+          <i class="bi bi-check"></i>Wi-Fi
+        </li>
+      </ul>
+      <div class="card-body bgcolor">
+        <a [routerLink]="'/galeria'" class="card-link btn btn-success">Fotos</a>
+      </div>
+    </div>
+    <div class="card mb-3 mx-5 shadow slide-in-right" style="width: 25rem">
+      <img
+        src="/image/instalaciones/depto2/depto2_2h.jpg"
+        class="card-img-top ratio ratio-16x9"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5 class="tcolor">4 Personas</h5>
+        <p class="card-text">
+          Departamento en planta alta, equipado con cocina completa, heladera,
+          microondas, vajilla completa, TV.
+        </p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><i class="bi bi-check"></i>1 Habitacion</li>
+        <li class="list-group-item">
+          <i class="bi bi-check"></i>Ropa de cama y toallas
+        </li>
+        <li class="list-group-item">
+          <i class="bi bi-check"></i>Ambiente climatizado
+        </li>
+        <li class="list-group-item"><i class="bi bi-check"></i>Wi-fi</li>
+      </ul>
+      <div class="card-body">
+        <a [routerLink]="'/galeria'" class="card-link btn btn-success">Fotos</a>
+      </div>
+    </div>
+  </div>
+</section>

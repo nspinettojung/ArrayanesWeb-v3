@@ -1,0 +1,90 @@
+<nav
+  class="navbar navbar-expand-lg fixed-top "
+  [ngClass]="{ 'scrolled-navbar ': isScrolled }"
+>
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="#" [ngClass]="{ 'd-none': isMobile }"
+      >Departamentos Arrayanes</a
+    >
+    <a class="navbar-brand fw-bold" href="#" [ngClass]="{ 'd-none': !isMobile }"
+      >Depto.Arrayanes</a
+    >
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasResponsive"
+      aria-controls="offcanvasResponsive"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="offcanvas-lg offcanvas-end"
+      tabindex="-1"
+      data-bs-scroll="true"
+      id="offcanvasResponsive"
+      aria-labelledby="offcanvasNavbarLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          data-bs-target="#offcanvasResponsive"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-2">
+          <li class="nav-item">
+            <a
+              href="#hero"
+              class="nav-link fw-bold btn btn-outline-success border-0"
+              data-bs-dismiss="offcanvas"
+              data-bs-target="#offcanvasResponsive"
+              >Inicio Rápido</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              href="#benefits"
+              fragment="benefits"
+              class="nav-link fw-bold btn btn-outline-success border-0"
+              data-bs-dismiss="offcanvas"
+              data-bs-target="#offcanvasResponsive"
+              >Servicios Únicos</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              href="#pricing"
+              fragment="pricing"
+              
+              class="nav-link fw-bold btn btn-outline-success border-0"
+              data-bs-dismiss="offcanvas"
+              data-bs-target="#offcanvasResponsive"
+            >
+              Instalaciones
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link btn fw-bold btn btn-success bg-success"
+              data-bs-dismiss="offcanvas"
+              data-bs-target="#offcanvasResponsive"
+              rel="noopener noreferrer"
+              target="_blank"
+              (click)="openWhatsApp()"
+            >
+              Reservar
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

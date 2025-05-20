@@ -1,0 +1,60 @@
+section {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  background: linear-gradient(rgba(211, 229, 211, 0.8),
+      rgba(245, 239, 220, 0.7),
+      rgba(200, 180, 140, 0.8)),
+    url("/portada.jpg");
+
+}
+
+h1 {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+span {
+  color: #198754;
+
+}
+
+@keyframes animhero {
+  0% {
+    opacity: 0;
+    transform: scale(1.4);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.display-1 {
+  animation: animhero 2s ease 0s 1 normal forwards;
+}
+
+.panim {
+  animation: animhero 2s ease 0s 1 normal forwards;
+
+}
+
+@keyframes banimhero {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+}
+
+.btn {
+  animation: banimhero 2s ease 0s 1 normal forwards;
+}

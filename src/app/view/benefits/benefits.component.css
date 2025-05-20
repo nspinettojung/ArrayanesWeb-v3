@@ -1,0 +1,27 @@
+.bi {
+  color: #198754;
+}
+h6{
+  color: #198754;
+}
+
+
+@keyframes benanim {
+	0% {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.banim {
+  view-timeline-name: --reveal;
+  animation-name: benanim;
+  animation-fill-mode: both;
+  animation-timeline: --reveal;
+  animation-range: entry 25% cover 50%;
+}

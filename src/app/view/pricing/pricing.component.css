@@ -1,0 +1,92 @@
+.bgcolor{
+  background-color: #bcdccd !important; 
+}
+
+h6 {
+  color: #198754;
+}
+
+.card-title {
+  color: black;
+}
+
+.bi {
+  color: #198754;
+}
+
+.card{
+  --bs-card-bg: #bcdccd;      
+  --bs-card-color: #333333;   
+  --bs-card-border-color: #02cb6d8a;
+   
+}
+
+.list-group{
+  --bs-list-group-bg: #bcdccd; 
+  --bs-list-group-color: #333333; 
+  --bs-list-group-border-color: #02cb6d8a; 
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    opacity: 0;
+    transform: translatey(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translatey(0);
+  }
+}
+
+
+.card.slide-in-left {
+  view-timeline-name: --reveal;
+  animation-name: slideInFromLeft ;
+  animation-fill-mode: both;
+
+  animation-timeline: --reveal;
+  animation-range: entry 25% cover 50%;
+}
+
+.card.slide-in-right {
+  view-timeline-name: --reveal;
+  animation-name: slideInFromRight; ;
+  animation-fill-mode: both;
+
+  animation-timeline: --reveal;
+  animation-range: entry 25% cover 50%;
+}
+
+.title{
+  view-timeline-name: --reveal;
+  animation-name: slideInFromTop; ;
+  animation-fill-mode: both;
+
+  animation-timeline: --reveal;
+  animation-range: entry 25% cover 50%;
+}
+
