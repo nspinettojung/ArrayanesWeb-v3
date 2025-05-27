@@ -27,7 +27,7 @@ export class NavbarComponent {
   }
 
   openWhatsApp() {
-    window.open('https://wa.me/5493547540855', '_blank');
+    window.open('https://api.whatsapp.com/send?phone=5493547540855', '_blank');
   }
 
   ngAfterViewInit(): void {

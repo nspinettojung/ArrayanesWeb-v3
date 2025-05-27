@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "/dist",
+    "public": "dist/arrayanes-web-v3/browser",
     "ignore": [
       "firebase.json",
       "**/.*",

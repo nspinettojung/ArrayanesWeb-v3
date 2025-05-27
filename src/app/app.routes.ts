@@ -1,4 +1,6 @@
-import { Routes } from '@angular/router';
+import { ExtraOptions, Routes } from '@angular/router';
+import { GalleryComponent } from './view/gallery/gallery.component';
+import { GalleryHComponent } from './view/gallery-h/gallery-h.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '', pathMatch: 'full' },
@@ -9,9 +11,7 @@ export const routes: Routes = [
   },
   {
     path: 'galeria',
-    loadComponent: () =>
-      import('./view/gallery/gallery.component').then(
-        (m) => m.GalleryComponent
-      ),
+    component: GalleryComponent,
   },
+  { path: 'galeriah', component: GalleryHComponent },
 ];

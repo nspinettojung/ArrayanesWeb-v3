@@ -46,27 +46,4 @@ export class GalleryComponent {
       class: '',
     },
   ];
-
-  gDepto2 = [
-    {
-      url: `image/instalaciones/depto2/depto2_1h.jpg`,
-      class: '',
-    },
-    {
-      url: 'image/instalaciones/depto2/depto2_2h.jpg',
-      class: '',
-    },
-    {
-      url: 'image/instalaciones/depto2/depto2_3h.jpg',
-      class: '',
-    },
-    {
-      url: 'image/instalaciones/depto2/depto2_4h.jpg',
-      class: '',
-    },
-    {
-      url: 'image/instalaciones/depto2/depto2_5h.jpg',
-      class: '',
-    },
-  ];
 }
