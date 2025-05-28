@@ -7,7 +7,9 @@
     <h2>Nuestros departamentos</h2>
     <p>Elige el departamento que mejor se adapte a ti.</p>
   </div>
+  @defer {
   <div class="d-md-flex gap-5">
+    <!-- Tarjeta de presentación del primer departamento -->
     <div class="card mb-3 mx-5 shadow slide-in-left" style="width: 25rem">
       <img
         src="/image/instalaciones/depto1/depto1_4h.jpg"
@@ -42,12 +44,15 @@
         >
       </div>
     </div>
+
+    <!-- Tarjeta de presentación del segundo departamento -->
     <div class="card mb-3 mx-5 shadow slide-in-right" style="width: 25rem">
       <img
         src="/image/instalaciones/depto2/depto2_2h.jpg"
         class="card-img-top ratio ratio-16x9"
         alt="..."
       />
+
       <div class="card-body">
         <h5 class="tcolor">4 Personas</h5>
         <p class="card-text">
@@ -72,4 +77,5 @@
       </div>
     </div>
   </div>
+  }
 </section>
