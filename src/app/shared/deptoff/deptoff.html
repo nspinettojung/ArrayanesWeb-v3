@@ -1,8 +1,10 @@
 <dta-navbar></dta-navbar>
-<div class=" flex flex-1 justify-center py-5">
+<div class="flex flex-1 justify-center py-5">
   <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
     <div class="flex flex-wrap gap-2 p-4">
-      <a class="text-[#60758a] text-base font-medium leading-normal" [routerLink]="'/alojamiento'"
+      <a
+        class="text-[#60758a] text-base font-medium leading-normal"
+        [routerLink]="'/alojamiento'"
         >Alojamientos</a
       >
       <span class="text-[#60758a] text-base font-medium leading-normal">/</span>
@@ -24,36 +26,17 @@
       <div
         class="w-full gap-1 overflow-hidden bg-white @[480px]:gap-2 aspect-[3/2] rounded-xl grid grid-cols-[2fr_1fr_1fr]"
       >
-        <div
-          class="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none row-span-2"
+        @for (img of imagenes; track $index) {
+        <button
+          class="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none focus:outline-none
+            {{ $index === 0 ? 'row-span-2' : '' }}"
           style="
-            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB-wakSCGQdOibuCd-Jd2GkNmsSzL8Jx9CC8AU76ZrldyQURb-J8TLSlR2-xva3e4OO5bNiScOldkfJ22rOeqvjycFcM5jdPrQthXeASSXca4OdECljglE5pjVmjrSlXwQJ0zwK_bke2DPmtGf2bQzi-GMgYfHx8_EV7h0rvBPRor9zbowz1wno5HYV3mGgWTM3ooPtKC3-YIhy24iF1qDTBsv8diAZ9w_Cz5wZifrnP7UcEt33Kzoy9Q9lXikNJYba_mbj0GGwHn0');
+            background-image: url('{{ img }}');
           "
-        ></div>
-        <div
-          class="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none"
-          style="
-            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCIZQ4pR5-SfvJxA4DIMQv8nN-e8wx307K49IjLDq7HZCkqTlV1naN3rXz1LnJiX3Z4n-VorXE53-7sUKJrixEoEuNr96T1Zn0Z-Hm9WpJkHDnjDA7w0PBMZUCBdkBYOvNhQcehVl0BAOEZ0_v87m8a0tAXFWiZd-gS5IydwzcFkhrOTE2O6x_dgpBOr1OEobcvXOO8s-CvrZqd2Eelm4_QNyAq_lryQ8K83fQB6ij3XqgHO6Lz8m0YapJ_B0pfQr-9EECUw3Tqe0k');
-          "
-        ></div>
-        <div
-          class="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none"
-          style="
-            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCWeHvf-KUsBXCGYb4xuWywa_zxGU93c7koNbLxj0zireB7_5ba_nyI6IGlXKeBPd7ZtVqCOMyEldUbifurX8XBwHCT6K0uzCIWukYdY4lLt4MvumO4Ek3Vu3wj_oLgQRpfY0UV_hB0U2la4Qqe2GfzMyyjkecqI9isBO247U9kqOE7Htv4yxykdrNBm1fne-G8niyfRQB7rrAnK2_EewHvCFSbVGxAHorejcVxENk-KiSseTGtwl0IclS4T8IVoXWH1cuslEkpqec');
-          "
-        ></div>
-        <div
-          class="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none"
-          style="
-            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDZjXBqkuv0EwrHhULeuwPc-Uni25l1WXuRHkojYbyZJAfGTvsOFATygKHRTq28G-XNYDyJ-mCiSMquU4tCzBRCx5X-DUh4rTpZDSZqXMHkTAo2MU8sVHCIZREaayr__QjKv04OdsrG50x_Je3ngTgyTn1ToaESGy5U2JJwvO86Pz8TS446NapVFP7zdlFjgrwq38pLNe6MLGqveeuH-MnbMi5E50ELz-Dnc6HAjqwSLC_4Di1ZhA3jw4-6v489rPxxhaDiTtKZh14');
-          "
-        ></div>
-        <div
-          class="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none"
-          style="
-            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCmjj-kqG89xhn9OUoRfkaUsKJ2p77tufhf3uAVkYUb_X8fCQMEuTDrTCaAqZ3oOYiwIyO9aBYQ-ez6V3tJraL-2HB4ijoI5SFD3E4kAQPeMFYTxLVAyK_J55SmT_yMQFpHMq4hvLgQ9i5T1_rdWH-Jo7jK0pZcKQoiKNl_kuVzZZmLsk4G-oZMvNKzUz-7dlSG6eL_OS1Hh7iCMpdJXdmMINY8IQ6-DIgOdiOPSC5DDdDU7PYi6VnvZZnYVnkb2mQjIXNLurojO3A');
-          "
-        ></div>
+          (click)="openModal(img)"
+          aria-label="Ver imagen grande"
+        ></button>
+        }
       </div>
     </div>
     <h2
@@ -223,7 +206,7 @@
         </h2>
       </div>
     </div>
-    
+
     <h2
       class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5"
     >
@@ -278,4 +261,14 @@
     </div>
   </div>
 </div>
+<!-- Modal -->
+
+@if (modalOpen) {
+<dta-modal
+  [images]="imagenes"
+  [activeImage]="imagenSeleccionada"
+  (close)="modalOpen = false"
+  (changeImage)="imagenSeleccionada = $event.img"
+></dta-modal>
+}
 <dta-footer></dta-footer>

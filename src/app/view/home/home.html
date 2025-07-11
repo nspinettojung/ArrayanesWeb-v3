@@ -4,12 +4,14 @@
 >
   <dta-navbar></dta-navbar>
   <div class="layout-container flex h-full grow flex-col">
-    <div class="px-40 flex flex-1 justify-center py-5">
-      <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+    <div class="flex flex-1 justify-center py-5">
+      <div
+        class="layout-content-container flex flex-col w-full max-w-[960px] flex-1 px-2 sm:px-4"
+      >
         <div class="@container">
-          <div class="@[480px]:p-4">
+          <div class="p-2 sm:p-4">
             <div
-              class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-start justify-end px-4 pb-10 @[480px]:px-10"
+              class="flex min-h-[320px] sm:min-h-[480px] flex-col gap-4 sm:gap-8 rounded-xl bg-cover bg-center bg-no-repeat items-start justify-end px-2 sm:px-4 pb-6 sm:pb-10"
               style="
                 background-image: linear-gradient(
                     rgba(0, 0, 0, 0.1) 0%,
@@ -65,7 +67,7 @@
           Discover our apartments
         </h2>
         <div
-          class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-2 sm:p-4"
         >
           @for (card of cardsT; track $index) {
           <dta-card
