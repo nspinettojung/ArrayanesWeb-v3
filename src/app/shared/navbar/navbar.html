@@ -2,29 +2,33 @@
   class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap bg-white border-b border-solid border-b-[#f0f2f5] px-10 py-3"
 >
   <div class="flex items-center gap-4 text-[#111418]">
-    <div class="size-4">
-      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g clip-path="url(#clip0_6_319)">
-          <path
-            d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z"
-            fill="currentColor"
-          ></path>
-        </g>
-        <defs>
-          <clipPath id="clip0_6_319">
-            <rect width="48" height="48" fill="white"></rect>
-          </clipPath>
-        </defs>
-      </svg>
-    </div>
     <h2
-      class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em]"
+      class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em] select-none"
     >
       Departamentos Arrayanes
     </h2>
   </div>
-  <div class="flex flex-1 justify-end gap-8">
-    <div class="flex items-center gap-9">
+  <!-- Botón hamburguesa solo en móvil -->
+  <button
+    class="sm:hidden flex items-center justify-center p-2"
+    (click)="showMenu = !showMenu"
+    aria-label="Abrir menú"
+  >
+    <svg width="28" height="28" fill="none" viewBox="0 0 24 24">
+      <path
+        stroke="#111418"
+        stroke-width="2"
+        stroke-linecap="round"
+        d="M4 6h16M4 12h16M4 18h16"
+      />
+    </svg>
+  </button>
+  <!-- Menú normal en desktop, menú desplegable en móvil -->
+  <div
+    class="flex-1 flex-col sm:flex-row flex justify-end gap-8"
+    [ngClass]="{'hidden': !showMenu, 'flex': showMenu, 'sm:flex': true, 'absolute': showMenu, 'top-16': showMenu, 'left-0': showMenu, 'w-full': showMenu, 'bg-white': showMenu, 'px-4': showMenu, 'py-2': showMenu, 'border-b': showMenu, 'z-40': showMenu}"
+  >
+    <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-9">
       @for (item of rLinks; track $index) {
       <a
         class="text-[#111418] text-sm font-medium leading-normal"
@@ -33,27 +37,19 @@
       >
       }
     </div>
-    <div class="flex gap-2">
+    <div class="flex gap-2 mt-2 sm:mt-0">
       <dta-button
         [bClass]="'flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#3d98f4] text-white text-sm font-bold leading-normal tracking-[0.015em] gap-1'"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="26"
-          height="26"
-          fill="#25D366"
-          viewBox="0 0 256 256"
+        <a
+          href="https://wa.me/5493547540855"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-1 text-white"
         >
-          <path
-            d="M128,32A96,96,0,0,0,44.89,176.07L32.42,213.46a8,8,0,0,0,10.12,10.12l37.39-12.47A96,96,0,1,0,128,32Zm24,152a80,80,0,0,1-80-80,32,32,0,0,1,32-32l16,32-12.32,18.47a48.19,48.19,0,0,0,25.85,25.85L152,136l32,16A32,32,0,0,1,152,184Z"
-            opacity="0.2"
-          ></path>
-          <path
-            d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.62-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"
-          ></path>
-        </svg>
-        <span class="truncate">Reservar</span></dta-button
-      >
+          <span class="truncate">Reservar</span>
+        </a>
+      </dta-button>
     </div>
   </div>
 </header>

@@ -17,57 +17,63 @@
                     rgba(0, 0, 0, 0.1) 0%,
                     rgba(0, 0, 0, 0.4) 100%
                   ),
-                  url('https://lh3.googleusercontent.com/aida-public/AB6AXuD9wreRahRVSSKA8g01MPKgaXvw5mTQHKz-c6_lWF4b5OujxJZi8b9GisHkPEQgLkKGfHX6-lHy_INoByJqeBsQ7-G_5orZGK0CeFO4rPy_6HBkzLa2T79SMD1JW1nTIj2kIypXWiInrIvSx-UxZzI7w3R6tUs58g-2M0nWjyLPmXWKABcWDwGFS3km3NnDNpJyq68ho-fqSKEa6xN3C_4ev3PjTFjfsaVHDLvLup2F-x49RABH4LspUldbnQcqgDhkJekL1Lrrc90');
+                  url('img/portada.webp');
               "
             >
               <div class="flex flex-col gap-2 text-left">
                 <h1
-                  class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
+                  class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] select-none"
                 >
-                  Encuentra tu hogar ideal
+                  Tu estadía en Alta Gracia
                 </h1>
                 <h2
-                  class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal"
+                  class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal select-none"
                 >
-                  Descubre una amplia selección de departamentos en las mejores
-                  ubicaciones de la ciudad. Vive la experiencia de un hogar
-                  diseñado para ti.
+                  Sumérgete en la historia viva de Alta Gracia, joya del
+                  patrimonio jesuítico cordobés que vibra con cultura durante
+                  todo el año. Disfruta del Festival Gastronómico Peperina, el
+                  festival de food trucks Mionca, y el tradicional Encuentro
+                  Anual de Colectividades Alta Gracia, uno de los eventos más
+                  importantes de la zona que celebra la diversidad cultural.
                 </h2>
               </div>
               <button
                 class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#dce8f3] text-[#121416] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
+                [routerLink]="'/alojamiento'"
               >
-                <span class="truncate">Explorar departamentos</span>
+                <span class="truncate select-none">Explorar departamentos</span>
               </button>
             </div>
           </div>
         </div>
 
         <h2
-          class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5"
+          class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 select-none"
         >
-          Inspiration for your next trip
+          Encontrá la comodidad que buscás
         </h2>
         <div
           class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden"
         >
           <div class="flex items-stretch p-4 gap-3">
             @for (card of cards; track $index) {
-            <dta-card
-              [imgCard]="card.imgCard"
-              [tCard]="card.tCard"
-              [description]="card.description "
-            ></dta-card>
+            <div class="min-h-[180px] flex flex-col w-[290px] select-none">
+              <dta-card
+                [imgCard]="card.imgCard"
+                [tCard]="card.tCard"
+                [description]="card.description "
+              ></dta-card>
+            </div>
             }
           </div>
         </div>
         <h2
-          class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5"
+          class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 select-none"
         >
-          Discover our apartments
+          Descubre nuestros alojamientos
         </h2>
         <div
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-2 sm:p-4"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-2 sm:p-4 select-none"
         >
           @for (card of cardsT; track $index) {
           <dta-card
