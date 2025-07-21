@@ -305,6 +305,7 @@
 
 @if (modalOpen) {
 <dta-modal
+  [title]="'Departamento planta baja'"
   [images]="imagenes"
   [activeImage]="imagenSeleccionada"
   (close)="modalOpen = false"

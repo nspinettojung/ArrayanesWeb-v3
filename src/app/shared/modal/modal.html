@@ -7,7 +7,7 @@
     (click)="$event.stopPropagation()"
   >
     <header class="flex items-center justify-between px-6 py-4 border-b">
-      <h2 class="text-lg font-bold text-[#121416]">Lux Stay</h2>
+      <h2 class="text-lg font-bold text-[#121416]">{{title()}}</h2>
       <button
         class="text-[#121416] bg-[#f1f2f4] rounded-full p-2 hover:bg-opacity-80"
         (click)="onClose()"

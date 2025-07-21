@@ -7,6 +7,7 @@ import { Component, EventEmitter, input, output } from '@angular/core';
   styleUrl: './modal.scss',
 })
 export class Modal {
+  title = input<string>('');
   images = input<string[]>();
   activeImage = input<string>('');
   close = output();

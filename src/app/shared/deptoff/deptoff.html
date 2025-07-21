@@ -277,6 +277,7 @@
 
 @if (modalOpen) {
 <dta-modal
+  [title]="'Departamento primer piso'"
   [images]="imagenes"
   [activeImage]="imagenSeleccionada"
   (close)="modalOpen = false"
