@@ -19,13 +19,6 @@ export class Deptoff {
     'img/DPP/DPP-5.webp',
   ];
 
-  // openModal(img: string) {
-  //   this.selectedImage = img;
-  // }
-
-  // closeModal() {
-  //   this.selectedImage = null;
-  // }
 
   imagenSeleccionada = this.imagenes[0];
   modalOpen = false;
