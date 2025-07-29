@@ -4,10 +4,11 @@ import { Card } from '../../shared/card/card';
 import { ICard } from '../../core/interface/i-card';
 import { Footer } from '../../shared/footer/footer';
 import { RouterLink } from '@angular/router';
+import { Button } from "../../shared/button/button";
 
 @Component({
   selector: 'dta-home',
-  imports: [Navbar, Card, Footer, RouterLink],
+  imports: [Navbar, Card, Footer, RouterLink, Button],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
