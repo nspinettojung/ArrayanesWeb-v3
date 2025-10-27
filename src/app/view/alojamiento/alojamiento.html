@@ -1,7 +1,7 @@
 <dta-navbar></dta-navbar>
 <div class="flex flex-1 justify-center py-5 min-h-[calc(100vh-270px)]">
   <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-    <div class="flex flex-wrap gap-2 p-4">
+    <div class="flex flex-wrap gap-2 p-4 animate-fade-in-up">
       <a
         class="text-[#111418] text-base font-medium leading-normal select-none"
         [routerLink]="'/alojamiento'"
@@ -10,16 +10,16 @@
       <span class="text-[#60758a] text-base font-medium leading-normal select-none">/</span>
     </div>
     <div class="md:grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
-      <div class="flex flex-col gap-3 pb-3">
-        <a [routerLink]="['/alojamiento/1']">
+      <div class="flex flex-col gap-3 pb-3 animate-fade-in-up hover-lift rounded-xl">
+        <a [routerLink]="['/alojamiento/planta-baja']" class="transition-smooth">
           <div
-            class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+            class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl transition-smooth "
             style="
               background-image: url('img/DPB/DPB-1.webp');
             "
           ></div>
         </a>
-        <div>
+        <div class="">
           <p class="text-[#111518] text-base font-medium leading-normal select-none">
             Departamento en planta baja
           </p>
@@ -28,10 +28,10 @@
           </p>
         </div>
       </div>
-      <div class="flex flex-col gap-3 pb-3">
-        <a [routerLink]="['/alojamiento/2']">
+      <div class="flex flex-col gap-3 pb-3 animate-fade-in-up hover-lift rounded-xl">
+        <a [routerLink]="['/alojamiento/primer-piso']" class="transition-smooth">
           <div
-            class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+            class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl transition-smooth "
             style="
               background-image: url('img/DPP/DPP-1.webp');
             "

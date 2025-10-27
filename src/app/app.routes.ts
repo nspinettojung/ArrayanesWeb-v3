@@ -11,12 +11,12 @@ export const routes: Routes = [
       import('./view/alojamiento/alojamiento').then((m) => m.Alojamiento),
   },
   {
-    path: 'alojamiento/1',
+    path: 'alojamiento/planta-baja',
     loadComponent: () =>
       import('./shared/deptopb/deptopb').then((m) => m.Deptopb),
   },
   {
-    path: 'alojamiento/2',
+    path: 'alojamiento/primer-piso',
     loadComponent: () =>
       import('./shared/deptoff/deptoff').then((m) => m.Deptoff),
   },

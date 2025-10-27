@@ -11,7 +11,7 @@
         <div class="@container">
           <div class="p-2 sm:p-4">
             <div
-              class="flex min-h-[320px] sm:min-h-[480px] flex-col gap-4 sm:gap-8 rounded-xl bg-cover bg-center bg-no-repeat items-start justify-end px-2 sm:px-4 pb-6 sm:pb-10"
+              class="flex min-h-[320px] sm:min-h-[480px] flex-col gap-4 sm:gap-8 rounded-xl bg-cover bg-center bg-no-repeat items-start justify-end px-2 sm:px-4 pb-6 sm:pb-10 animate-fade-in"
               style="
                 background-image: linear-gradient(
                     rgba(0, 0, 0, 0.1) 0%,
@@ -20,7 +20,7 @@
                   url('img/portada.webp');
               "
             >
-              <div class="flex flex-col gap-2 text-left">
+              <div class="flex flex-col gap-2 text-left animate-fade-in-left">
                 <h1
                   class="text-white text-2xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] select-none"
                 >
@@ -38,8 +38,9 @@
                 </h2>
               </div>
               <dta-button
-                [bClass]="'flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#3d98f4] hover:bg-[#2a7ae2] text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]'"
+                [bClass]="'flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#3d98f4] hover:bg-[#2a7ae2] text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] transition-smooth'"
                 [routerLink]="'/alojamiento'"
+                class="animate-fade-in-up"
               >
                 <span class="truncate select-none">Explorar departamentos</span>
               </dta-button>
@@ -57,7 +58,9 @@
         >
           <div class="flex items-stretch p-4 gap-3">
             @for (card of cards; track $index) {
-            <div class="min-h-[180px] flex flex-col w-[290px] select-none">
+            <div
+              class="min-h-[180px] flex flex-col w-[290px] select-none animate-fade-in-up"
+            >
               <dta-card
                 [imgCard]="card.imgCard"
                 [tCard]="card.tCard"
@@ -76,11 +79,13 @@
           class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-2 sm:p-4 select-none"
         >
           @for (card of cardsT; track $index) {
-          <dta-card
-            [imgCard]="card.imgCard"
-            [tCard]="card.tCard"
-            [description]="card.description "
-          ></dta-card>
+          <div class="animate-fade-in-up">
+            <dta-card
+              [imgCard]="card.imgCard"
+              [tCard]="card.tCard"
+              [description]="card.description "
+            ></dta-card>
+          </div>
           }
         </div>
       </div>

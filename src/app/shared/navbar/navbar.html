@@ -1,9 +1,9 @@
 <header
-  class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap bg-white border-b border-solid border-b-[#f0f2f5] px-10 py-3"
+  class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap bg-white border-b border-solid border-b-[#f0f2f5] px-10 py-3 animate-fade-in"
 >
   <div class="flex items-center gap-4 text-[#111418]">
     <h2
-      class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em] select-none"
+      class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em] select-none transition-smooth hover:text-[#3d98f4] cursor-pointer"
     >
       Departamentos Arrayanes
     </h2>
@@ -31,7 +31,7 @@
     <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-9">
       @for (item of rLinks; track $index) {
       <a
-        class="text-[#111418] text-sm font-medium leading-normal "
+        class="text-[#111418] text-sm font-medium leading-normal transition-smooth hover:text-[#3d98f4]"
         [routerLink]="item.link"
         >{{ item.text }}</a
       >

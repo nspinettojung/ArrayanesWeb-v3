@@ -1,11 +1,13 @@
-<div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+<div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60 transition-smooth">
   <div
-    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex flex-col"
+    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex flex-col transition-smooth overflow-hidden"
     style="
           background-image: url('{{ imgCard() }}');
         "
-  ></div>
-  <div>
+  >
+    
+  </div>
+  <div class="bg-white p-3">
     <p class="text-[#111418] text-base font-medium leading-normal">
       {{ tCard() }}
     </p>
