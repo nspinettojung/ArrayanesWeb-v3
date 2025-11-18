@@ -11,9 +11,32 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
     />
+    <script>
+      (function loadTailwindWithFallback() {
+        const cdnUrl =
+          'https://cdn.tailwindcss.com?plugins=forms,container-queries';
+        const cdnScript = document.createElement('script');
+        cdnScript.src = cdnUrl;
+        cdnScript.defer = true;
+        cdnScript.onload = function () {
+          document.documentElement.dataset.tailwindSource = 'cdn';
+        };
+        cdnScript.onerror = function () {
+          document.documentElement.dataset.tailwindSource = 'local';
+          console.warn(
+            '[Tailwind] CDN no disponible, activando hoja de estilos local.'
+          );
+          const fallbackLink = document.createElement('link');
+          fallbackLink.rel = 'stylesheet';
+          fallbackLink.href = './css/tailwind-fallback.css';
+          fallbackLink.crossOrigin = 'anonymous';
+          document.head.appendChild(fallbackLink);
+        };
+        document.head.appendChild(cdnScript);
+      })();
+    </script>
   </head>
   <body>
     <app-root></app-root>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   </body>
 </html>

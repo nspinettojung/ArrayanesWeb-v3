@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 /* You can add global styles to this file, and also import other style files */
 
 /* ===== ANIMACIONES GLOBALES ===== */
@@ -45,7 +48,6 @@
   }
 }
 
-
 /* Clases de utilidad para animaciones */
 .animate-fade-in-up {
   animation: fadeInUp 0.6s ease-out forwards;
@@ -62,7 +64,6 @@
 .animate-fade-in {
   animation: fadeIn 0.8s ease-out forwards;
 }
-
 
 /* Animaciones con delay escalonado */
 .animate-delay-100 {
@@ -92,15 +93,15 @@
 
 /* Transiciones suaves para hover - solo para elementos no textuales */
 .transition-smooth {
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
-              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-              background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Animación de hover para tarjetas */
 .hover-lift {
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
-              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateZ(0);
   -webkit-transform: translateZ(0);
 }
@@ -108,11 +109,9 @@
 .hover-lift:hover {
   transform: translateZ(0) translateY(-8px);
   -webkit-transform: translateZ(0) translateY(-8px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 
-              0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
-
-
 
 /* ===== TRANSICIONES DE VISTA ===== */
 
@@ -176,7 +175,15 @@
 }
 
 /* Evitar problemas de renderizado de texto durante animaciones */
-p, h1, h2, h3, h4, h5, h6, span, a {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+a {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -204,7 +211,7 @@ p, h1, h2, h3, h4, h5, h6, span, a {
     transform: none;
     box-shadow: none;
   }
-  
+
   .animate-fade-in-up,
   .animate-fade-in-left,
   .animate-fade-in-right {
